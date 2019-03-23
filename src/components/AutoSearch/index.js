@@ -1,6 +1,5 @@
 import React,{Component,Fragment} from 'react';
 import PropTypes from 'prop-types';
-import {debounce} from 'throttle-debounce';
 
 import {
     SearchWrapper,
