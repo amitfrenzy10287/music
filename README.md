@@ -1,21 +1,17 @@
-# Web Developer test
-This exercise is meant to test your general knowdlege and to show that you have well balanced skills in front end development.
-Your assignment will be evaluated on the quality of your code, the ease of launching your project, the stability.
-Candidates usually manage to do the assignment in 6 hours, but feel free to take the necessary time.
+# How to run 
+* npm i && npm start
 
-Good luck! :)
+# Architecture and Design Flow
 
-# Front-end (Our preference is ReactJS)
-For the front end part, you will build a web page that will display a list of songs and their ratings taken from the attached JSON file.
+This project is designed and developed using React,Redux,Webpack and styled components
 
-- Songs should be listed in a responsive grid. Think mobile!
-- Keep in mind that you can have more songs than the sample we gave. Think performance!
-- Make the ratings editable by making the stars clickable.
-- Each line should look like the attached screenshot (not pixel perfect). Mandatory elements are the Yousician logo, level, title, rating and artist. For other info, or color choice, you have complete freedom.
-- Add filtering by level
-- Add song search
+* In the home page there is Search bar where you can search songs of your choice
+* You can also use filter settings to filter songs by difficulty level or filter by level
+* For filter by Level, you can see there is a setting icon at the top left corner or the screen, you can toggle Level by pressing the icon button.
+* On button click you will see the levels to filter 
+* You can click on any levels one by one so as to filter songs by level
+* Initial page shows only few songs, the more you scroll more you get the list of songs
+* You can see the star ratings on every songs in the list, star ratings are editable and can be edited by Mouse Hover or Mouse Move on star.
+* The project is compatible with all the screen sizes from desktop to mobile till iPhone 5s (i.e 320px screen resolution).
 
-Bonus:
-- Add pagination, or infinite scroll
-- Add some tests
-- A good look on the frontend will be appreciated
+Thank you very much.
