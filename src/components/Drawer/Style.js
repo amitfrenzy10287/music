@@ -60,6 +60,6 @@ export const DrawerContent = styled.div`
   overflow-y: scroll;
   color: #fff;
   cursor:pointer;
-  background-image: linear-gradient(to right,#ae0000 ,#bcbcbc,white);
+  background-color: #2d2d2d;
   box-shadow: -10px 0px 10px rgba(0,0,0,0.19);
 `;

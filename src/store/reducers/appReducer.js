@@ -1,48 +1,66 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-  news: 0,
+  songs: [],
   message: '',
   loading: false,
+  filteredSongs: [],
+  pageSongs: [],
 };
 
-const gelAllNews = (state, action) => {
+const gelAllSongs = (state, action) => {
   const data = {
     loading: false,
-    news: action.news,
-  };
-  return {...state, ...data};
-
-};
-
-const fetchNewsFail = ( state, action ) => {
-  return { ...state,...{ error: true, loading: false } };
-};
-
-const saveNews = (state, action) => {
-  const data = {
-    loading: false,
-    news: action.news,
+    songs: action.songs,
+    pageSongs: action.songs.slice(0,5),
   };
   return {...state, ...data};
 };
 
-const deleteNews = (state, action) => {
-  const data = {
-    loading: false,
-    news: action.news,
-  };
-  return {...state, ...data};
+const setFilteredSongs = (state, action) => {
+    const data = {
+        loading: false,
+        filteredSongs: action.filteredSongs,
+    };
+    return {...state, ...data};
 };
 
-const saveNewsFail = ( state, action ) => {
+const getFilteredSongs = (state, action) => {
+    const data = {
+        loading: false,
+        filteredSongs: action.filteredSongs,
+    };
+    return {...state, ...data};
+};
+
+const setPageData = (state,action) =>{
+    const data = {
+        loading: false,
+        pageSongs: action.pageSongs
+    };
+    return {...state, ...data};
+};
+
+const clearFilteredSongs = (state, action) => {
+    const data = {
+        loading: false,
+        filteredSongs: [],
+    };
+    return {...state, ...data};
+};
+
+const fetchSongsFail = ( state, action ) => {
   return { ...state,...{ error: true, loading: false } };
 };
 
 const reducer = ( state = initialState, action ) => {
   switch ( action.type ) {
-    case actionTypes.GET_ALL_NEWS: return gelAllNews(state, action);
-    case actionTypes.DELETE_NEWS: return gelAllNews(state, action);
+    case actionTypes.GET_ALL_SONGS: return gelAllSongs(state, action);
+    case actionTypes.FETCH_SONGS_FAIL: return fetchSongsFail(state, action);
+    case actionTypes.SET_FILTERED_SONG: return setFilteredSongs(state, action);
+    case actionTypes.GET_FILTERED_SONG: return getFilteredSongs(state, action);
+    case actionTypes.CLEAR_FILTERED_SONG: return clearFilteredSongs(state, action);
+    case actionTypes.SET_PAGE_SONGS: return setPageData(state, action);
     default:
       return state;
   }

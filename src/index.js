@@ -5,12 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import authReducer from './store/reducers/authReducer';
 import appReducer from './store/reducers/appReducer';
 
-const rootReducer = combineReducers({ 
-  auth:authReducer,
-  news: appReducer,
+const rootReducer = combineReducers({
+  app : appReducer,
 });
 
 const store = createStore(

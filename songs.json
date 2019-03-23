@@ -1,7 +1,7 @@
 [{
     "artist": "The Yousicians",
     "title": "Lycanthropic Metamorphosis",
-    "level": 13,
+    "level": 4,
     "released": "2016-10-26",
     "rating": 5
   },
@@ -13,11 +13,32 @@
     "rating": 2.3
   },
   {
+    "artist": "The Yousicians",
+    "title": "Babysitting",
+    "level": 6,
+    "released": "2016-07-01",
+    "rating": 2.7
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "A New Kennel 2",
+    "level": 8,
+    "released": "2010-02-03",
+    "rating": 4.5
+  },
+  {
     "artist": "Mr Fastfinger",
     "title": "Awaki-Waki",
     "level": 13,
     "released": "2012-05-11",
     "rating": 3
+  },
+  {
+    "artist": "The Yousicians",
+    "title": "Babysitting",
+    "level": 6,
+    "released": "2016-07-01",
+    "rating": 2.7
   },
   {
     "artist": "The Yousicians",
@@ -64,7 +85,7 @@
   {
     "artist": "The Yousicians",
     "title": "Vivaldi Allegro Mashup",
-    "level": 13,
+    "level": 15,
     "released": "2016-06-01",
     "rating": 2
   },

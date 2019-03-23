@@ -3,25 +3,34 @@ import {NavLink} from 'react-router-dom';
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: Helvetica, sans-serif;
     padding:0;
     margin:0;
+    font-style: normal;
+    font-size: 1.1em;
+    background-color: #000;
   }
+`;
+
+export const LogoImg = styled.img`
+    width: 50px;
+    height: 50px;
+    margin: 5px;
 `;
 
 export const Wrapper =  styled.div`
   position:relative;
   width:100%;
-  min-height:800px;
+  height: auto;
   padding:0;
   margin:0;
-  background-color: #f4f4f4;
+  color: #fff;
 `;
 
 export const MenuBar = styled.div`
   position: static;
   color: #fff;
-  background-color: #000;
+  background-color: #6fc13e;
   width: 100%;
   display: flex;
   z-index: 1100;
@@ -119,7 +128,8 @@ export const ContentDrawerItem = styled.div`
   font-side: 16px;
   display:block;
   padding:13px;
-  background-color: #850000;
+  background-color: #353535;
+  box-shadow: #494949 1px 1px 4px;
   & a {
     text-decoration:none;
     color:#fff;
@@ -162,18 +172,17 @@ export const DrawButtonWrap = styled.div`
   }
 `;
 
-const activeClassName =(props)=> props.activeClassName;
-export const StyledNavLink = styled(NavLink).attrs({activeClassName})`
+export const StyledNavLink = styled(NavLink)`
     cursor: pointer;
     text-decoration:none;
     color:#fff;
     display:inline-block;
     padding:13px;
-  &.${activeClassName} {
-    border-bottom: solid 2px #f00;
-    background-color: #980000; 
+  &.${(props)=> props.activeClassName} {
+    border-bottom: solid 2px #399a00;
+    background-color: #41ae00; 
     &:hover{
-      background-color:#980000;
+      background-color: #41ae00;
     }
   }
 `;

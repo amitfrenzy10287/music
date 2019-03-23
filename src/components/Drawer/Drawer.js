@@ -7,22 +7,21 @@ import {
   DrawerContent,
 } from './Style';
 
-export default class Drawer extends React.Component {
+const Drawer =(props)=> {
 
-  render() {
-
-    const { open, size, position, onDismiss, backgroundColor } = this.props;
+    const { open, size, position, onDismiss, backgroundColor } = props;
 
     return (
       <DrawerWrapper open={open} size={size} position={position}>
         <DrawerOverlay open={open} onClick={onDismiss} />
         <DrawerContent open={open} size={size} position={position} backgroundColor={backgroundColor}>
-          {this.props.children}
+          {props.children}
         </DrawerContent>
       </DrawerWrapper>
     );
-  }
-}
+};
+
+export default Drawer;
 
 Drawer.propTypes = {
   open: PropTypes.bool.isRequired,
@@ -30,10 +29,10 @@ Drawer.propTypes = {
   position: PropTypes.oneOf(['top','bottom','left','right']),
   onDismiss: PropTypes.func.isRequired,
   backgroundColor: PropTypes.string,
-}
+};
 
 Drawer.defaultProps = {
   size: '300px',
   position: 'left',
   backgroundColor: '#fff',
-}
+};
